@@ -156,6 +156,7 @@ public class Rospisaniye extends AppCompatActivity{
         } catch (Throwable t) {}
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onResume() {
         super.onResume();
@@ -164,7 +165,13 @@ public class Rospisaniye extends AppCompatActivity{
         final Day[] Days = new Day[6];
         for(int i = 0;i<6;i++){Days[i] = new Day();}
         openFile(Days,"Days.txt");
-        Days[0].loadLess(editTexts,lnumber);
+        Days[daynumber].loadLess(editTexts,lnumber);
+        if (daynumber == 0){buttonpn.setBackground  (getResources().getDrawable(R.drawable.pn1)); }
+        if (daynumber == 1){buttonvt.setBackground  (getResources().getDrawable(R.drawable.vt1)); }
+        if (daynumber == 2){buttonsr.setBackground  (getResources().getDrawable(R.drawable.sr1)); }
+        if (daynumber == 3){buttonchtv.setBackground(getResources().getDrawable(R.drawable.cht1));}
+        if (daynumber == 4){buttonpt.setBackground  (getResources().getDrawable(R.drawable.pt1)); }
+        if (daynumber == 5){buttonsubb.setBackground(getResources().getDrawable(R.drawable.sb1)); }
         for (int i = 0; i<8;i++)
         {
             editTexts[i].setEnabled(false); editTexts[i].setCursorVisible(false);

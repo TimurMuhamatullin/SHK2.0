@@ -15,10 +15,10 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
 public class Note  extends AppCompatActivity{
-    Button button;
-    EditText editText;
-    Button button2;
-    Button button3;
+    private  EditText editText;
+    private  Button button;
+    private  Button button2;
+    private  Button button3;
     private final static String Zam1 = "Zam1File.txt";
     private final static String Zam2 = "Zam2File.txt";
     private final static String Zam3 = "Zam3File.txt";

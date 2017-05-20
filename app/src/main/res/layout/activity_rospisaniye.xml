@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bdgd"
     android:orientation="vertical"
-    android:weightSum="1"
-    >
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -263,61 +262,61 @@
                 android:id="@+id/editText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapWords"
                 android:textColor="@android:color/background_light"
                 android:textColorLink="@android:color/background_light"
                 android:textSize="24sp"
-                android:theme="@style/AppTheme"
-                android:inputType = "textCapWords"/>
+                android:theme="@style/AppTheme" />
 
             <EditText
                 android:id="@+id/editText4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapWords"
                 android:textColor="@android:color/background_light"
                 android:textColorLink="@android:color/background_light"
                 android:textSize="24sp"
-                android:theme="@style/AppTheme"
-                android:inputType = "textCapWords"/>
+                android:theme="@style/AppTheme" />
 
             <EditText
                 android:id="@+id/editText5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapWords"
                 android:textColor="@android:color/background_light"
                 android:textColorLink="@android:color/background_light"
                 android:textSize="24sp"
-                android:theme="@style/AppTheme"
-                android:inputType = "textCapWords"/>
+                android:theme="@style/AppTheme" />
 
             <EditText
                 android:id="@+id/editText6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapWords"
                 android:textColor="@android:color/background_light"
                 android:textColorLink="@android:color/background_light"
                 android:textSize="24sp"
-                android:inputType = "textCapWords"
                 android:theme="@style/AppTheme" />
 
             <EditText
                 android:id="@+id/editText7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapWords"
                 android:textColor="@android:color/background_light"
                 android:textColorLink="@android:color/background_light"
                 android:textSize="24sp"
-                android:theme="@style/AppTheme"
-                android:inputType = "textCapWords"/>
+                android:theme="@style/AppTheme" />
 
             <EditText
                 android:id="@+id/editText8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textCapWords"
                 android:textColor="@android:color/background_light"
                 android:textColorLink="@android:color/background_light"
                 android:textSize="24sp"
-                android:theme="@style/AppTheme"
-                android:inputType = "textCapWords"/>
+                android:theme="@style/AppTheme" />
 
             <EditText
                 android:id="@+id/editText9"

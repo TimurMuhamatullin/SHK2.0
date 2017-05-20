@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Notes extends AppCompatActivity {
-    private Button  button;
+    private Button button;
     private Button button1;
     private Button button2;
     private Button button3;
@@ -22,6 +22,7 @@ public class Notes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoosenote);
+
         button  = (Button) findViewById(R.id.button8);
         button1 = (Button) findViewById(R.id.button3);
         button2 = (Button) findViewById(R.id.button2);
@@ -71,7 +72,10 @@ public class Notes extends AppCompatActivity {
     }
     @Override
     protected void onResume(){
+
         super.onResume();
+
+
         openFile("Zam1File.txt",button1);
         openFile("Zam2File.txt",button2);
         openFile("Zam3File.txt",button3);

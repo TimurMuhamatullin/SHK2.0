@@ -1,56 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nnooadb.shk.MainActivity"
-    android:background="@color/colorBlack">
-
-    <VideoView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/videoView" />
+    tools:context="nnooadb.shk.MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlack"
-        android:weightSum="1"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fon"
+        android:orientation="vertical">
 
-        <View
+
+        <TextView
+            android:id="@+id/textView12"
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
-
-        <View
-            android:layout_width="wrap_content"
-            android:background="@drawable/grad"
-            android:layout_height="7dp" />
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
 
         <Button
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:text="Заметки"
-            android:layout_width="325dp"
-            android:layout_height="107dp"
-            android:id="@+id/button"
-            android:background="@drawable/butt1"
-            android:layout_weight="0.05"
+            android:id="@+id/button12"
+            android:layout_width="300dp"
+            android:layout_height="170dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/butt3"
+            android:textColor="@color/colorBlack"
             android:textSize="18sp" />
 
-        <Button
-            android:layout_gravity="top|center_horizontal"
-            android:text="Дневник"
-            android:layout_width="325dp"
-            android:layout_height="107dp"
-            android:id="@+id/button12"
-            android:background="@drawable/butt1"
-            android:textSize="18sp"
-            android:layout_weight="0.05" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="250dp"
+                android:layout_height="135dp"
+                android:background="@drawable/butt1"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/background_light"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|right"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
 
     </LinearLayout>
+
 </RelativeLayout>
