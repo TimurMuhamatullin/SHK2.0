@@ -11,7 +11,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Notes extends AppCompatActivity {
-    private Button button;
     private Button button1;
     private Button button2;
     private Button button3;
@@ -23,7 +22,7 @@ public class Notes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoosenote);
 
-        button  = (Button) findViewById(R.id.button8);
+        Button button = (Button) findViewById(R.id.button8);
         button1 = (Button) findViewById(R.id.button3);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button4);
@@ -46,7 +45,7 @@ public class Notes extends AppCompatActivity {
         });
         button2.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){ intent1.putExtra("ZamNumber",2);startActivity(intent1);
+            public void onClick(View view){  intent1.putExtra("ZamNumber",2);startActivity(intent1);
             }
         });
         button3.setOnClickListener(new View.OnClickListener(){
@@ -61,7 +60,7 @@ public class Notes extends AppCompatActivity {
         });
         button5.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){intent1.putExtra("ZamNumber",5);startActivity(intent1);
+            public void onClick(View view){  intent1.putExtra("ZamNumber",5);startActivity(intent1);
             }
         });
         button6.setOnClickListener(new View.OnClickListener(){
@@ -94,13 +93,13 @@ public class Notes extends AppCompatActivity {
                 String line;
                 StringBuilder builder = new StringBuilder();
                 while ((line = reader.readLine()) != null) {
-                    builder.append(line + "\n");
+                    builder.append(line).append("\n");
                 }
 
                 inputStream.close();
                 button.setText(builder.toString());
             }
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
     }
 }
 

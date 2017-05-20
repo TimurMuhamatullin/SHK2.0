@@ -2,24 +2,24 @@ package nnooadb.shk;
 
 import android.widget.EditText;
 
-public class Day {
-    public String l1;
-    public String l2;
-    public String l3;
-    public String l4;
-    public String l5;
-    public String l6;
-    public String l7;
-    public String l8;
-    public String l1r;
-    public String l2r;
-    public String l3r;
-    public String l4r;
-    public String l5r;
-    public String l6r;
-    public String l7r;
-    public String l8r;
-    public void setLess(String l1,String l2,String l3,String l4,String l5,String l6,String l7,String l8, int lrnumb, String lr){
+class Day {
+    String l1;
+    String l2;
+    String l3;
+    String l4;
+    String l5;
+    String l6;
+    String l7;
+    String l8;
+    String l1r;
+    String l2r;
+    String l3r;
+    String l4r;
+    String l5r;
+    String l6r;
+    String l7r;
+    String l8r;
+    void setLess(String l1, String l2, String l3, String l4, String l5, String l6, String l7, String l8, int lrnumb, String lr){
         this.l1 = l1;this.l2 = l2;this.l3 = l3;this.l4 = l4;this.l5 = l5;this.l6 = l6;this.l7 = l7;this.l8 = l8;
         if (lrnumb==1){this.l1r = lr;}
         if (lrnumb==2){this.l2r = lr;}
@@ -31,7 +31,7 @@ public class Day {
         if (lrnumb==8){this.l8r = lr;}
 
     }
-    public void loadLess(EditText[] editTexts,int ln){
+    void loadLess(EditText[] editTexts, int ln){
         editTexts[0].setText(this.l1);
         editTexts[1].setText(this.l2);
         editTexts[2].setText(this.l3);

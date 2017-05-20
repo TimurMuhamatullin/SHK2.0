@@ -114,7 +114,7 @@ public class Rospisaniye extends AppCompatActivity{
                 else {
              osw.write(days[i].l1r + "\n" +days[i].l2r + "\n" +days[i].l3r + "\n" +days[i].l4r + "\n" +days[i].l5r + "\n" +days[i].l6r + "\n" +days[i].l7r + "\n" +days[i].l8r + "\n");}}
             osw.close();
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
     }
     private void openFile(Day[] days,String filename) {
         try {
@@ -153,7 +153,7 @@ public class Rospisaniye extends AppCompatActivity{
 
                 inputStream.close();
             }
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)

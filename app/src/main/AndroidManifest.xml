@@ -29,9 +29,6 @@
         <activity android:name=".Rospisaniye"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DeadLines"
-            android:screenOrientation="portrait">
-        </activity>
     </application>
 
 </manifest>

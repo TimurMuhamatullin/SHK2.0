@@ -22,8 +22,6 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
-    private Button button2;
     private TextView textView;
     private TextView textView2;
     private TextView textView3;
@@ -39,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         textView  = (TextView) findViewById(R.id.textView12);
         textView2 = (TextView) findViewById(R.id.textView13);
         textView3 = (TextView) findViewById(R.id.textView14);
-        button    = (Button) findViewById(R.id.button);
-        button2   = (Button) findViewById(R.id.button12);
+        Button button = (Button) findViewById(R.id.button);
+        Button button2 = (Button) findViewById(R.id.button12);
 
         final Intent intent  = new Intent(MainActivity.this, Notes.class);
         final Intent intent2 = new Intent(MainActivity.this, Rospisaniye.class);
@@ -56,24 +54,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
-        if(watchFile("Zam6File.txt")==false){openFile("Zam6File.txt");}
-        if(watchFile("Zam5File.txt")==false){openFile("Zam5File.txt");}
-        if(watchFile("Zam4File.txt")==false){openFile("Zam4File.txt");}
-        if(watchFile("Zam3File.txt")==false){openFile("Zam3File.txt");}
-        if(watchFile("Zam2File.txt")==false){openFile("Zam2File.txt");}
-        if(watchFile("Zam1File.txt")==false){openFile("Zam1File.txt");}
+        if(!watchFile("Zam6File.txt")){openFile("Zam6File.txt");}
+        if(!watchFile("Zam5File.txt")){openFile("Zam5File.txt");}
+        if(!watchFile("Zam4File.txt")){openFile("Zam4File.txt");}
+        if(!watchFile("Zam3File.txt")){openFile("Zam3File.txt");}
+        if(!watchFile("Zam2File.txt")){openFile("Zam2File.txt");}
+        if(!watchFile("Zam1File.txt")){openFile("Zam1File.txt");}
 
         time = new Time();
         time.setToNow();
-        textView.setText(time.format("%H:%M:%S").toString());
-        textView2.setText(time.format("%d.%m.%Y").toString());
+        textView.setText(time.format("%H:%M:%S"));
+        textView2.setText(time.format("%d.%m.%Y"));
         Runnable r = new Runnable(){
 
             @Override
             public void run() {
                         time.setToNow();
-                        textView.setText(time.format("%H:%M:%S").toString());
-                        textView2.setText(time.format("%d.%m.%Y").toString());
+                        textView.setText(time.format("%H:%M:%S"));
+                        textView2.setText(time.format("%d.%m.%Y"));
                         handler.postDelayed(this, 1000);
             }
         };
@@ -84,12 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onResume(){
         super.onResume();
-        if(watchFile("Zam6File.txt")==false){openFile("Zam6File.txt");}
-        if(watchFile("Zam5File.txt")==false){openFile("Zam5File.txt");}
-        if(watchFile("Zam4File.txt")==false){openFile("Zam4File.txt");}
-        if(watchFile("Zam3File.txt")==false){openFile("Zam3File.txt");}
-        if(watchFile("Zam2File.txt")==false){openFile("Zam2File.txt");}
-        if(watchFile("Zam1File.txt")==false){openFile("Zam1File.txt");}
+        if(!watchFile("Zam6File.txt")){openFile("Zam6File.txt");}
+        if(!watchFile("Zam5File.txt")){openFile("Zam5File.txt");}
+        if(!watchFile("Zam4File.txt")){openFile("Zam4File.txt");}
+        if(!watchFile("Zam3File.txt")){openFile("Zam3File.txt");}
+        if(!watchFile("Zam2File.txt")){openFile("Zam2File.txt");}
+        if(!watchFile("Zam1File.txt")){openFile("Zam1File.txt");}
 
     }
     private void openFile(String fileName) {
@@ -103,13 +101,13 @@ public class MainActivity extends AppCompatActivity {
                 StringBuilder builder = new StringBuilder();
 
                 while ((line = reader.readLine()) != null) {
-                    builder.append(line + "\n");
+                    builder.append(line).append("\n");
                 }
 
                 inputStream.close();
                 textView3.setText(builder.toString());
             }
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
     }
     private boolean watchFile(String fileName) {
         try {
@@ -121,13 +119,13 @@ public class MainActivity extends AppCompatActivity {
                 String line;
                 StringBuilder builder = new StringBuilder();
                 while ((line = reader.readLine()) != null) {
-                    builder.append(line + "\n");
+                    builder.append(line).append("\n");
                 }
 
                 inputStream.close();
                 if(builder.toString().isEmpty()){return true;}
             }
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
         return false;
     }
     }

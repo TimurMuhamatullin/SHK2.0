@@ -16,9 +16,6 @@ import java.io.OutputStreamWriter;
 
 public class Note  extends AppCompatActivity{
     private  EditText editText;
-    private  Button button;
-    private  Button button2;
-    private  Button button3;
     private final static String Zam1 = "Zam1File.txt";
     private final static String Zam2 = "Zam2File.txt";
     private final static String Zam3 = "Zam3File.txt";
@@ -30,9 +27,9 @@ public class Note  extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
         editText = (EditText) findViewById(R.id.editText);
-        button  = (Button) findViewById(R.id.button11);
-        button2 = (Button) findViewById(R.id.button9);
-        button3 = (Button) findViewById(R.id.button10);
+        Button button = (Button) findViewById(R.id.button11);
+        Button button2 = (Button) findViewById(R.id.button9);
+        Button button3 = (Button) findViewById(R.id.button10);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,13 +79,13 @@ public class Note  extends AppCompatActivity{
                 StringBuilder builder = new StringBuilder();
 
                 while ((line = reader.readLine()) != null) {
-                    builder.append(line + "\n");
+                    builder.append(line).append("\n");
                 }
 
                 inputStream.close();
                 editText.setText(builder.toString());
             }
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
     }
     private void saveFile(String fileName) {
         try {
@@ -96,7 +93,7 @@ public class Note  extends AppCompatActivity{
             OutputStreamWriter osw = new OutputStreamWriter(outputStream);
             osw.write(editText.getText().toString());
             osw.close();
-        } catch (Throwable t) {}
+        } catch (Throwable ignored) {}
     }
 }
 
